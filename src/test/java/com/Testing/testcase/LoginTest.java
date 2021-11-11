@@ -68,18 +68,21 @@ public class LoginTest extends AbstractTestNGSpringContextTests{
 		cp.country(map.get("country"));
 		//cp.phone(map.get("phone"));
 		//cp.Mobilephone(map.get("mobilephone"));
-	//	cp.dateOfBirth(map.get("dob"));
-		//cp.ClickNext();
-		//cp.ActivateCustomer();
+		//cp.dateOfBirth(map.get("dob"));
+		cp.ClickNext();
+		cp.ActivateCustomer();
 		
 		// buy card for customer
+
+		bc.Buycard();
+		bc.addcart(map.get("addcart")); 
+		bc.Checkout(); 
+		bc.Checkout2();
+		bc.shippingoption(map.get("shippingoption")); 
+		bc.Checkout3();
+		bc.paymentoption(); 
+		bc.Checkout4();
 		
-		
-		/*
-		 * bc.Buycard(); bc.addcart(map.get("addcart")); bc.Checkout(); bc.Checkout2();
-		 * bc.shippingoption(map.get("shippingoption")); bc.Checkout3();
-		 * bc.paymentoption(); bc.Checkout4();
-		 */
 		 
 		 
 	}
